@@ -28,28 +28,4 @@ bot.on('guildMemberAdd', member => {
     member.setNickname("🆕" + member.displayName)
 });
 
-//commands
-bot.on('message', (message) => {
-    if(message.content == '!help') {
-            message.channel.send({embed: {
-                color: 3447003,
-                author: {
-                    name: client.user.username,
-                    icon_url: client.user.avatarURL
-                },
-                title: "Avaiable Rules:"
-                description: "These are the available rules."
-                fields: [{
-                    name:"!pref (Top/Middle/Bottom/Support/Jungle/Fill)"
-                    value: "This sets your prefered lane."
-                }
-            ],
-            timestamp: new Date(),
-            footer: {
-                icon_url:client.user.avatarURL,
-                text: "@HS Guardian"
-            }
-    }
-});
-
 bot.login(process.env.BOT_TOKEN);
