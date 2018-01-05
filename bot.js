@@ -30,7 +30,6 @@ bot.on('guildMemberAdd', member => {
 
 //commands
 bot.on('message', (message) => {
-
     if(message.content == '!help') {
             message.channel.send({embed: {
                 color: 3447003,
