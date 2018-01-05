@@ -32,7 +32,8 @@ bot.on('guildMemberAdd', member => {
 bot.on('message', (message) => {
 
     if(message.content == '!help') {
-        message.reply('Bruh, We do not have commands right now.');
+        message.reply('Available Commands:');
+        message.reply('!pref (Top/Mid/Bottom/Support/Jungle/Fill)');
         //message.channel.sendMessage('Sorry, We do not have commands right now.);
     }
 
