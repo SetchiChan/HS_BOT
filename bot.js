@@ -32,11 +32,25 @@ bot.on('guildMemberAdd', member => {
 bot.on('message', (message) => {
 
     if(message.content == '!help') {
-        message.reply('Available Commands:');
-        message.reply('!pref (Top/Mid/Bottom/Support/Jungle/Fill)');
-        //message.channel.sendMessage('Sorry, We do not have commands right now.);
+            message.channel.send({embed: {
+                color: 3447003,
+                author: {
+                    name: client.user.username,
+                    icon_url: client.user.avatarURL
+                },
+                title: "Avaiable Rules:"
+                description: "These are the available rules."
+                fields: [{
+                    name:"!pref (Top/Middle/Bottom/Support/Jungle/Fill)"
+                    value: "This sets your prefered lane."
+                }
+            ],
+            timestamp: new Date(),
+            footer: {
+                icon_url:client.user.avatarURL,
+                text: "@HS Guardian"
+            }
     }
-
 });
 
 bot.login(process.env.BOT_TOKEN);
