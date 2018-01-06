@@ -10,17 +10,17 @@ bot.on('guildMemberAdd', member => {
 
 //Welcome to new member chat
 bot.on('guildMemberAdd', member => {
-    bot.channels.get("341921678118617101").sendMessage(member + " has joined Heaven Shadow! Please connect to new members lobby and wait for staff to orientate you.");
+    bot.channels.get("399041704604467212").sendMessage(member + " has joined Heaven Shadow! Please connect to new members lobby and wait for staff to orientate you.");
 });
 
 //Staff notification of new user
 bot.on('guildMemberAdd', member => {
-    bot.channels.get('342366838451339264').sendMessage(member + " has joined the Heaven Shadow. Please contact them for orientation!");
+    bot.channels.get('399039851288068096').sendMessage(member + " has joined the Heaven Shadow. Please contact them for orientation!");
 });
 
 //Staff notification user has left
 bot.on('guildMemberRemove', member => {
-    bot.channels.get('342366838451339264').sendMessage(member + " has left Heaven Shadow.");
+    bot.channels.get('399039894527148044').sendMessage(member + " has left Heaven Shadow.");
 });
 
 //Nickname
