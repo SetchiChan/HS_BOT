@@ -65,7 +65,7 @@ bot.on("message", function(message) {
                     icon_url: bot.user.avatarURL
                 },
                 title: "Available Commands",
-                description: "__________________",
+                description: "================",
                 fields: [{
                     name: "'Help",
                     value: "Lists all available commands"
