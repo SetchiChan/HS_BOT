@@ -3,7 +3,8 @@ const bot = new Discord.Client();
 
 const newUser = [];
 
-const PREFIX = "'"
+const PREFIX = "'";
+const TOKEN = "x";
 
 //sending dm
 bot.on('guildMemberAdd', member => {
@@ -39,25 +40,28 @@ bot.on('message', (message) => {
 });
 
 //commands
-bot.on("message", (function) {
-    if (message.author.equals(botuser)) return;
+bot.on("ready", function() {
+    console.log("Ready");
+});
+
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
 
     if (!message.content.startsWith(PREFIX)) return;
 
-    vars args = message.content.substring(PREFIX.length.split(" ");
+    var args = message.content.substring(PREFIX.length).split(" ");
 
     switch (args[0].toLowerCase()) {
+        case "info":
+            message.channel.sendMessage("I'm a fucking useless Bot, totally not created by Setchi");
+            break;
+        default:
+            message.channel.sendMessage("Invalid command");
+            break;
         case "ping":
             message.channel.sendMessage("Pong!");
             break;
-        case "8ball":
-            if (args[1]); {
 
-            } else {
-                message.channel.sendMessage("Cant read that");
-            }
-        default
-            message.channel.sendMessage("Stupid Command!");
     }
 });
 
