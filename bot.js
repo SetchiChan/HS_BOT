@@ -68,7 +68,7 @@ bot.on("message", function(message) {
                     value: "Lists all available commands"
                 },
                 {
-                    name: "!Pref",
+                    name: "!Pref (Does not work right now)",
                     value: "Selects prefered Role. (Top/Mid/Jungle/Bottom/Support/Fill)"
                 }
             ],
