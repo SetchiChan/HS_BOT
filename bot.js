@@ -54,8 +54,6 @@ bot.on('message', (message) => {
         }
  });
               
-        
-
 //Random Message
 bot.on('message', (message) => {
     
