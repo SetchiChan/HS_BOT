@@ -96,6 +96,7 @@ bot.on("message", function(message) {
 //Ready
 bot.on("ready", function() {
     console.log("Ready");
+    bot.channels.get('399019218831540238').sendMessage("Bot Ready");
 });
 
 bot.login(process.env.BOT_TOKEN);
