@@ -34,11 +34,13 @@ bot.on('message', (message) => {
     if(message.content == 'bad bot') {
         message.reply('Ive been a very naughty bot');
     }
-     if(message.content == 'hentai') {
-        message.reply(member + 'has been banned.');
+});
+
+//stap
+bot.on('message', (message) => {
+    if(message.content == 'hentai') {
+        message.reply(member.displayName + 'has been banned.');
     }
-    
-    
 });
 
 bot.login(process.env.BOT_TOKEN);
