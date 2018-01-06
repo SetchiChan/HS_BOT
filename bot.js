@@ -56,6 +56,7 @@ bot.on("message", function(message) {
             break;
         case "pref":
             message.channel.sendMessage("Sorry, I'm not working right now. Try again later.")
+            break;
         case "help":
             message.channel.send({embed: {
                 color: 10038562,
