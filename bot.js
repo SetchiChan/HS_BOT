@@ -38,8 +38,9 @@ bot.on('message', (message) => {
 
 //stap
 bot.on('message', (message) => {
+    
     if(message.content == 'hentai') {
-        message.reply(member.displayName + 'has been banned.');
+        message.reply('@SetchiChan has been banned.');
     }
 });
 
