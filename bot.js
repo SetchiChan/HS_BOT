@@ -61,7 +61,7 @@ bot.on("message", function(message) {
         case "ping":
             message.channel.sendMessage("Pong!");
             break;
-        case "help";
+        case "help":
             message.channel.send({embed: {
                 color: 3447003,
                 author: {
@@ -87,5 +87,5 @@ bot.on("message", function(message) {
                 }
             }
 });
-
+            
 bot.login(process.env.BOT_TOKEN);
