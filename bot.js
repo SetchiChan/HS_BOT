@@ -50,12 +50,6 @@ bot.on("message", (function) {
         case "ping":
             message.channel.sendMessage("Pong!");
             break;
-        case "8ball":
-            if (args[1]); {
-
-            } else {
-                message.channel.sendMessage("Cant read that");
-            }
         default
             message.channel.sendMessage("Stupid Command!");
     }
