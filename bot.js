@@ -34,6 +34,10 @@ bot.on('message', (message) => {
     if(message.content == 'bad bot') {
         message.reply('Ive been a very naughty bot');
     }
+     if(message.content == 'hentai') {
+        message.reply(member + 'has been banned.');
+    }
+    
     
 });
 
