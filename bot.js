@@ -28,4 +28,13 @@ bot.on('guildMemberAdd', member => {
     member.setNickname("🆕" + member.displayName)
 });
 
+//Random Message
+bot.on('message', (message) => {
+    
+    if(message.content == 'bad bot'){
+        message.reply('Ive been a very naughty bot');
+    }
+    
+});
+
 bot.login(process.env.BOT_TOKEN);
