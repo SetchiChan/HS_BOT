@@ -40,10 +40,6 @@ bot.on('message', (message) => {
 });
 
 //commands
-bot.on("ready", function() {
-    console.log("Ready");
-});
-
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
@@ -53,7 +49,7 @@ bot.on("message", function(message) {
 
     switch (args[0].toLowerCase()) {
         case "info":
-            message.channel.sendMessage("I'm a fucking useless Bot, totally not created by Huzkii");
+            message.channel.sendMessage(member + "hey, I can help you out. My creator is totally not created by Setchi");
             break;
         case "ping":
             message.channel.sendMessage("Pong!");
@@ -84,36 +80,15 @@ bot.on("message", function(message) {
             }   
         })
         break;
-        case PREFIX:
-        message.channel.send({embed: {
-            color: 10038562,
-            author: {
-                name: bot.user.username,
-                icon_url: bot.user.avatarURL
-            },
-            title: "Available Commands",
-            description: "__________________",
-            fields: [{
-                name: "!Help",
-                value: "Lists all available commands"
-            },
-            {
-                name: "!Pref",
-                value: "Selects prefered Role. (Top/Mid/Jungle/Bottom/Support/Fill)"
-            }
-        ],
-        timestamp: new Date(),
-        footer: {
-            icon_url: bot.user.avatarURL,
-            text: "@HS Guardian#3033"
-            }
-        }   
-        })
-        break;
         default:
-        message.channel.sendMessage("Invalid command");
+        message.channel.sendMessage("Invalid command. Do "'help" for available commands.");
         break;
     }
+});
+
+//Console Ready
+bot.on("ready", function() {
+    console.log("Ready");
 });
 
 bot.login(process.env.BOT_TOKEN);
