@@ -81,7 +81,7 @@ bot.on("message", function(message) {
         })
         break;
         default:
-        message.channel.sendMessage("Invalid command");
+        message.channel.sendMessage("Invalid command! Do "'help" for available commands.");
         break;
     }
 });
