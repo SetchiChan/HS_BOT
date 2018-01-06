@@ -49,7 +49,7 @@ bot.on("message", function(message) {
 
     switch (args[0].toLowerCase()) {
         case "info":
-            message.channel.sendMessage(member + "hey, I can help you out. My creator is totally not created by Setchi");
+            message.channel.sendMessage("I'm a fucking useless Bot, totally not created by Huzkii");
             break;
         case "ping":
             message.channel.sendMessage("Pong!");
@@ -81,12 +81,12 @@ bot.on("message", function(message) {
         })
         break;
         default:
-        message.channel.sendMessage("Invalid command. Do "'help" for available commands.");
+        message.channel.sendMessage("Invalid command");
         break;
     }
 });
 
-//Console Ready
+//Ready
 bot.on("ready", function() {
     console.log("Ready");
 });
