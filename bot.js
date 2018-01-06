@@ -54,6 +54,8 @@ bot.on("message", function(message) {
         case "ping":
             message.channel.sendMessage("Pong!");
             break;
+        case "pref":
+            message.channel.sendMessage("Sorry, I'm not working right now. Try again later.")
         case "help":
             message.channel.send({embed: {
                 color: 10038562,
@@ -85,6 +87,10 @@ bot.on("message", function(message) {
         break;
     }
 });
+
+//test
+//bot.on('messageReactionAdd', (reaction, user) => {
+//});
 
 //Ready
 bot.on("ready", function() {
