@@ -28,19 +28,39 @@ bot.on('guildMemberAdd', member => {
     member.setNickname("🆕" + member.displayName)
 });
 
+//help
+bot.on('message', (message) => {
+    
+    if(message.content == '/help') {
+        message.channel.send({embed: {
+            color: 3447003,
+            author: {
+                name: client.user.username,
+                icon_url: client .user.avatarURL
+            },
+            title: "Available Commands",
+            url: "http://google.com",
+            description: "none",
+            fields: [{
+                name: "!help"
+                value: "Shows aviailable commands"
+            }
+          ],
+          timestamp: new Date(),
+          footer: {
+              icon_url: client.user.avatarURL,
+              text: "@Bot"
+           }
+        }
+ });
+              
+        
+
 //Random Message
 bot.on('message', (message) => {
     
     if(message.content == 'bad bot') {
         message.reply('Ive been a very naughty bot');
-    }
-});
-
-//stap
-bot.on('message', (message) => {
-    
-    if(message.content == 'hentai') {
-        message.reply('@SetchiChan has been banned.');
     }
 });
 
