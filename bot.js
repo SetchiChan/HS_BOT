@@ -64,11 +64,11 @@ bot.on("message", function(message) {
                 title: "Available Commands",
                 description: "__________________",
                 fields: [{
-                    name: "!Help",
+                    name: "'Help",
                     value: "Lists all available commands"
                 },
                 {
-                    name: "!Pref (Command does not work right now)",
+                    name: "'Pref (Command does not work right now)",
                     value: "Selects prefered Role. (Top/Mid/Jungle/Bottom/Support/Fill) [Limit of 2 per person]"
                 }
             ],
