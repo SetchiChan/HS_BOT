@@ -35,24 +35,32 @@ bot.on('message', (message) => {
         message.channel.send({embed: {
             color: 3447003,
             author: {
-                name: client.user.username,
-                icon_url: client .user.avatarURL
+              name: client.user.username,
+              icon_url: client.user.avatarURL
             },
-            title: "Available Commands",
+            title: "This is an embed",
             url: "http://google.com",
-            description: "none",
+            description: "This is a test embed to showcase what they look like and what they can do.",
             fields: [{
-                name: "!help"
-                value: "Shows aviailable commands"
-            }
-          ],
-          timestamp: new Date(),
-          footer: {
+                name: "Fields",
+                value: "They can have different fields with small headlines."
+              },
+              {
+                name: "Masked links",
+                value: "You can put [masked links](http://google.com) inside of rich embeds."
+              },
+              {
+                name: "Markdown",
+                value: "You can put all the *usual* **__Markdown__** inside of them."
+              }
+            ],
+            timestamp: new Date(),
+            footer: {
               icon_url: client.user.avatarURL,
-              text: "@Bot"
-           }
-        }
- });
+              text: "© Example"
+            }
+          } 
+});
               
 //Random Message
 bot.on('message', (message) => {
