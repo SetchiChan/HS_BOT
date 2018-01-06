@@ -68,15 +68,15 @@ bot.on("message", function(message) {
                     name: bot.user.username,
                     icon_url: bot.user.avatarURL
                 },
-                title: "Available Commands:",
-                description: "================",
+                title: "Available Commands",
+                description: "__________________",
                 fields: [{
                     name: "!Help",
                     value: "Lists all available commands"
                 },
                 {
                     name: "!Pref",
-                    value: "Selects prefered Role. (Top/Mid/Jungle/Bottom/Support/Fill) [Only 2 per user]"
+                    value: "Selects prefered Role. (Top/Mid/Jungle/Bottom/Support/Fill)"
                 }
             ],
             timestamp: new Date(),
@@ -86,6 +86,31 @@ bot.on("message", function(message) {
                 }
             }   
         })
+        case "'":
+        message.channel.send({embed: {
+            color: 10038562,
+            author: {
+                name: bot.user.username,
+                icon_url: bot.user.avatarURL
+            },
+            title: "Available Commands",
+            description: "__________________",
+            fields: [{
+                name: "!Help",
+                value: "Lists all available commands"
+            },
+            {
+                name: "!Pref",
+                value: "Selects prefered Role. (Top/Mid/Jungle/Bottom/Support/Fill)"
+            }
+        ],
+        timestamp: new Date(),
+        footer: {
+            icon_url: bot.user.avatarURL,
+            text: "@HS Guardian#3033"
+            }
+        }   
+    })
     }
 });
 
