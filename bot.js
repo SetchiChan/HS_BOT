@@ -20,7 +20,7 @@ bot.on('guildMemberAdd', member => {
 
 //Staff notification user has left
 bot.on('guildMemberRemove', member => {
-    bot.channels.get('399039894527148044').sendMessage(member + " has left Heaven Shadow.");
+    bot.channels.get('399039851288068096').sendMessage(member + " has left Heaven Shadow.");
 });
 
 //Nickname
