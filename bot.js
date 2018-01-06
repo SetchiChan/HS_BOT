@@ -55,9 +55,6 @@ bot.on("message", function(message) {
         case "info":
             message.channel.sendMessage("I'm a fucking useless Bot, totally not created by Huzkii");
             break;
-        default:
-            message.channel.sendMessage("Invalid command");
-            break;
         case "ping":
             message.channel.sendMessage("Pong!");
             break;
@@ -86,7 +83,8 @@ bot.on("message", function(message) {
                 }
             }   
         })
-        case "'":
+        break;
+        case PREFIX:
         message.channel.send({embed: {
             color: 10038562,
             author: {
@@ -110,7 +108,11 @@ bot.on("message", function(message) {
             text: "@HS Guardian#3033"
             }
         }   
-    })
+        })
+        break;
+        default:
+        message.channel.sendMessage("Invalid command");
+        break;
     }
 });
 
