@@ -69,14 +69,14 @@ bot.on("message", function(message) {
                     icon_url: bot.user.avatarURL
                 },
                 title: "Available Commands",
-                description: "__________________",
+                description: "================",
                 fields: [{
                     name: "!Help",
                     value: "Lists all available commands"
                 },
                 {
                     name: "!Pref",
-                    value: "Selects prefered Role. (Top/Mid/Jungle/Bottom/Support/Fill)"
+                    value: "Selects prefered Role. (Top/Mid/Jungle/Bottom/Support/Fill) [Only 2 per user]"
                 }
             ],
             timestamp: new Date(),
