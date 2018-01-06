@@ -31,7 +31,7 @@ bot.on('guildMemberAdd', member => {
 //Random Message
 bot.on('message', (message) => {
     
-    if(message.content == 'bad bot'){
+    if(message.content == 'bad bot') {
         message.reply('Ive been a very naughty bot');
     }
     
