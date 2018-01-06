@@ -61,7 +61,7 @@ bot.on("message", function(message) {
         case "ping":
             message.channel.sendMessage("Pong!");
             break;
-        case "help";
+        case "help":
             var embed = now Discord.RichEmbed()
                 .addField("Test Title", "Test Description", true)
                 .addField("Test Tisadadtle", "Test Descadwription", true)
