@@ -61,6 +61,15 @@ bot.on("message", function(message) {
         case "ping":
             message.channel.sendMessage("Pong!");
             break;
+        case "help":
+            var embed = now Discord.RichEmbed()
+                .addField("Test Title", "Test Description", true)
+                .addField("Test Tisadadtle", "Test Descadwription", true)
+                .setColor(0x00FFFF)
+                .setFooter("Fuck off")
+                .setThumbnail(message.author.avatarURL)
+            message.channel.sendEmbed(embed);
+            break;
     }
 });
 
