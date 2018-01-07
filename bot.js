@@ -16,6 +16,11 @@ bot.on('guildMemberAdd', member => {
     bot.channels.get("399041704604467212").sendMessage(member + " has joined Heaven Shadow! Please connect to new members lobby and wait for staff to orientate you.");
 });
 
+//AutoAssign Rank
+bot.on('guildMemberAdd', function(member) {
+    member.addRole(member.guild.roles.find("name", "Guardian [Member]🔰"));
+});
+
 //Staff notification of new user
 bot.on('guildMemberAdd', member => {
     bot.channels.get('399039851288068096').sendMessage(member + " has joined the Heaven Shadow. Please contact them for orientation!");
