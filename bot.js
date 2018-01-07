@@ -39,11 +39,6 @@ bot.on('message', (message) => {
     }
 });
 
-//Auto-Assign Rank
-bot.on('guildMemberAdd', member => {
-    member.setroles('399407999573032961');
-});
-
 //commands
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
