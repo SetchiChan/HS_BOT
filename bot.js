@@ -94,10 +94,6 @@ bot.on("message", function(message) {
     }
 });
 
-//test
-//bot.on('messageReactionAdd', (reaction, user) => {
-//});
-
 //Ready
 bot.on("ready", function() {
     console.log("Ready");
