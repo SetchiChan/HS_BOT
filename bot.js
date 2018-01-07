@@ -20,8 +20,7 @@ bot.on('guildMemberAdd', member => {
 bot.on('guildMemberAdd', function(member) {
     member.addRole(member.guild.roles.find("name", "Elite Guardian [Original Member]🎽"));
     
-    //set nickname
-    member.setNickname("🆕" + member.displayName);
+    member.setNickname("🆕" + member.displayName)
 });
 
 //Staff notification of new user
