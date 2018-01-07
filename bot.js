@@ -21,6 +21,11 @@ bot.on('guildMemberAdd', function(member) {
     member.addRole(member.guild.roles.find("name", "Elite Guardian [Original Member]🎽"));
 });
 
+//Nickname
+bot.on('guildMemberAdd', member => {
+    member.setNickname("🆕" + member.displayName)
+});
+
 //Staff notification of new user
 bot.on('guildMemberAdd', member => {
     bot.channels.get('399039851288068096').sendMessage(member + " has joined the Heaven Shadow. Please contact them for orientation!");
@@ -29,11 +34,6 @@ bot.on('guildMemberAdd', member => {
 //Staff notification user has left
 bot.on('guildMemberRemove', member => {
     bot.channels.get('399039851288068096').sendMessage(member + " has left Heaven Shadow.");
-});
-
-//Nickname
-bot.on('guildMemberAdd', member => {
-    member.setNickname("🆕" + member.displayName)
 });
               
 //Random Message
