@@ -58,9 +58,6 @@ bot.on("message", function(message) {
         case "ping":
             message.channel.sendMessage("Pong!");
             break;
-        case "pref":
-            
-            break;
         case "help":
         const collector = message.createReactionCollector((reaction, user) => 
             user.id === message.author.id &&
