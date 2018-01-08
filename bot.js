@@ -9,7 +9,7 @@ const TOKEN = "x";
 //sending dm
 bot.on('guildMemberAdd', member => {
     member.send("Welcome to the server!");
- });
+});
 
 //Welcome to new member chat
 bot.on('guildMemberAdd', member => {
@@ -43,6 +43,8 @@ bot.on('message', (message) => {
 
 //commands
 bot.on("message", function(message) {
+    bot.on('messageReactionAdd', (reaction, user) => {
+
     if (message.author.equals(bot.user)) return;
 
     if (!message.content.startsWith(PREFIX)) return;
@@ -57,9 +59,17 @@ bot.on("message", function(message) {
             message.channel.sendMessage("Pong!");
             break;
         case "pref":
-            message.channel.sendMessage("Sorry, I'm not working right now. Try again later.")
+            
             break;
         case "help":
+        const collector = message.createReactionCollector((reaction, user) => 
+            user.id === message.author.id &&
+            reaction.emoji.name === "◀" ||
+            reaction.emoji.name === "▶" ||
+            reaction.emoji.name === "❌"
+    ).once("collect", reaction => {
+        const chosen = reaction.emoji.name;
+        if(chosen === "◀"){
             message.channel.send({embed: {
                 color: 10038562,
                 author: {
@@ -77,19 +87,55 @@ bot.on("message", function(message) {
                     value: "Selects prefered Role. (Top/Mid/Jungle/Bottom/Support/Fill) [Limit of 2 per person]"
                 }
             ],
-            timestamp: new Date(),
-            footer: {
-                icon_url: bot.user.avatarURL,
-                text: "@HS Guardian#3033"
-                }
             }   
         })
+        }else if (chosen === "▶"){
+            message.channel.send({embed: {
+                color: 10038562,
+                author: {
+                    name: bot.user.username,
+                    icon_url: bot.user.avatarURL
+                },
+                title: "Available Commands",
+                description: "================",
+                fields: [{
+                    name: "'Help",
+                    value: "Lists all avasdasd commands"
+                },
+                {
+                    name: "'Pref (Command does not work right now)",
+                    value: "Selects prefered Rsadasdasdom/Support/Fill) [Limit of 2 per person]"
+                }
+            ],
+            }   
+        })  
+        } else if(chosen === "❌"){
+            message.channel.send({embed: {
+                color: 10038562,
+                author: {
+                    name: bot.user.username,
+                    icon_url: bot.user.avatarURL
+                },
+                title: "Available Commands",
+                description: "================",
+                fields: [{
+                    name: "'Help",
+                    value: "Lists asdasdilable commands"
+                },
+                {
+                    name: "'Pref (Command does not work right now)",
+                    value: "Selects prefered Rasdasdasd/Jungle/Bottom/Support/Fill) [Limit of 2 per person]"
+                }
+            ],
+            }   
+        })  
+        }
+    })
         break;
-        default:
-        message.channel.sendMessage("Invalid command! Do 'help for available commands.");
-        break;
-    }
+        }
+    })
 });
+
 
 //Ready
 bot.on("ready", function() {
