@@ -17,6 +17,7 @@ bot.on('guildMemberAdd', member => {
 });
 
 //AutoAssign Rank
+TimeUnit.SECONDS.sleep(3);
 bot.on('guildMemberAdd', function(member) {
     member.addRole(member.guild.roles.find("name", "Elite Guardian [Original Member]🎽"));
     
@@ -32,7 +33,7 @@ bot.on('guildMemberAdd', member => {
 bot.on('guildMemberRemove', member => {
     bot.channels.get('399039851288068096').sendMessage(member + " has left Heaven Shadow.");
 });
-              
+            
 //Random Message
 bot.on('message', (message) => {
     
