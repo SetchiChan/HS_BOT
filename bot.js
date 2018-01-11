@@ -17,9 +17,9 @@ bot.on('guildMemberAdd', member => {
 });
 
 //AutoAssign Rank
-bot.on('guildMemberAdd', function(member) {
-    member.addRole(member.guild.roles.find("name", "Elite Guardian [Original Member]🎽"));
-    
+bot.on('guildMemberAdd', (member) => {
+    setTimeout(() => { member.addRole(member.guild.roles.find("name", "Elite Guardian [Original Member]🎽")); }, 3000);
+
     member.setNickname("🆕" + member.displayName)
 });
 
