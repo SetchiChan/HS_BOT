@@ -59,6 +59,26 @@ bot.on("message", function(message) {
         case "pref":
             message.channel.sendMessage("Sorry, I'm not working right now. Try again later.")
             break;
+        case "test":
+            message.channel.send({embed: {
+                color: 10038562,
+                author: {
+                    name: bot.user.username,
+                    icon_url: bot.user.avatarURL
+                },
+                title: "Availablnjkns",
+                description: "================",
+                fields: [{
+                    value: "Lists all available commands"
+                },
+                {
+                    value: "Selects prefered Role. (Top/Mid/Jungle/Bottom/Support/Fill) [Limit of 2 per person]"
+                }
+            ],
+                }
+            }   
+        })
+        break;
         case "help":
             message.channel.send({embed: {
                 color: 10038562,
