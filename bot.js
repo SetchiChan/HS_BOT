@@ -58,9 +58,12 @@ bot.on("message", function(message) {
             break;
         case "pref":
             Promise.all([
-            message.react('🍎'),
-            message.react('🍊'),
-            message.react('🍇')
+            message.react('399268521776906241'),
+            message.react('399268521638494208'),
+            message.react('399268521420521474'),
+            message.react('399268521613328384'),
+            message.react('399268521646882816'),
+            message.react('399268521260875778')
         ])
             .catch(() => console.error('One of the emojis failed to react.'));
             break;
