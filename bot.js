@@ -57,8 +57,7 @@ bot.on("message", function(message) {
             message.channel.sendMessage("Pong!");
             break;
         case "pref":
-            message.channel.sendMessage("Command does not work.");
-            message.react('🍎')
+            message.channel.sendMessage("Command does not work. 'pref is in progress.")
             .then(() => message.react('399268521776906241'))
             .then(() => message.react('399268521638494208'))
             .then(() => message.react('399268521420521474'))
