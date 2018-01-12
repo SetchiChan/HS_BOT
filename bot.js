@@ -13,7 +13,7 @@ bot.on('guildMemberAdd', member => {
 
 //Welcome to new member chat
 bot.on('guildMemberAdd', member => {
-    bot.channels.get("399041704604467212").sendMessage(member + " has joined Heaven Shadow! Please connect to new members lobby and wait for staff to orientate you.");
+    setTimeout(() => { bot.channels.get("399041704604467212").sendMessage(member + " has joined Heaven Shadow! Please connect to new members lobby and wait for staff to orientate you.");  }, 3000);
 });
 
 //AutoAssign Rank
@@ -25,12 +25,12 @@ bot.on('guildMemberAdd', (member) => {
 
 //Staff notification of new user
 bot.on('guildMemberAdd', member => {
-    bot.channels.get('399039851288068096').sendMessage(member + " has joined the Heaven Shadow. Please contact them for orientation!");
+    setTimeout(() => { bot.channels.get('399039851288068096').sendMessage(member + " has joined the Heaven Shadow. Please contact them for orientation!"); }, 3000);
 });
 
 //Staff notification user has left
 bot.on('guildMemberRemove', member => {
-    bot.channels.get('399039851288068096').sendMessage(member + " has left Heaven Shadow.");
+    setTimeout(() => { bot.channels.get('399039851288068096').sendMessage(member + " has left Heaven Shadow."); }, 3000);
 });
             
 //Random Message
