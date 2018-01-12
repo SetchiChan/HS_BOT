@@ -57,7 +57,14 @@ bot.on("message", function(message) {
             message.channel.sendMessage("Pong!");
             break;
         case "pref":
-            message.channel.sendMessage("Sorry, I'm not working right now. Try again later.")
+            bot.on('messageReactionAdd', (reaction, user) => {    
+                Promise.all([
+                message.react('🍎'),
+                message.react('🍊'),
+                message.react('🍇')
+            ])
+                .catch(() => console.error('One of the emojis failed to react.'));
+            });
             break;
         case "help":
             message.channel.send({embed: {
