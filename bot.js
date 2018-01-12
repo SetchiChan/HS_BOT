@@ -57,14 +57,14 @@ bot.on("message", function(message) {
             message.channel.sendMessage("Pong!");
             break;
         case "pref":
-            Promise.all([
-            message.react('399268521776906241'),
-            message.react('399268521638494208'),
-            message.react('399268521420521474'),
-            message.react('399268521613328384'),
-            message.react('399268521646882816'),
-            message.react('399268521260875778')
-        ])
+            message.channel.sendMessage("Command does not work.");
+            message.react('🍎')
+            .then(() => message.react('399268521776906241'))
+            .then(() => message.react('399268521638494208'))
+            .then(() => message.react('399268521420521474'))
+            .then(() => message.react('399268521613328384'))
+            .then(() => message.react('399268521646882816'))
+            .then(() => message.react('399268521260875778'))
             .catch(() => console.error('One of the emojis failed to react.'));
             break;
         case "help":
