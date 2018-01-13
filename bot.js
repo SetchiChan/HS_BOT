@@ -11,17 +11,16 @@ bot.on('guildMemberAdd', member => {
     member.send("Welcome to the server!");
  });
 
-
 //AutoAssign Rank
 bot.on('guildMemberAdd', (member) => {
     setTimeout(() => { member.addRole(member.guild.roles.find("name", "Elite Guardian [Original Member]🎽")); }, 3000);
 
-    member.setNickname("🆕" + member.displayName)
+    setTimeout(() => { member.setNickname("🆕" + member.displayName); }, 3000);
 });
 
-//Welcome to new member chat
+//Welcome message.
 bot.on('guildMemberAdd', member => {
-    bot.channels.get("399041704604467212").sendMessage(member + " has joined Heaven Shadow! Please connect to new members lobby and wait for staff to orientate you."); 
+    setTimeout(() => { bot.channels.get('399041704604467212').sendMessage(member + " has joined Heaven's Shaddow! Please visit #verification_channel to verify yourself!"); }, 3000);
 });
 
 //Staff notification of new user
