@@ -15,7 +15,7 @@ bot.on('guildMemberAdd', member => {
             icon_url: bot.user.avatarURL
         },
         title: "Welcome to heaven's Shadow!",
-        description: "Feeder, Bronze, Challenger, Pro player, noob, or just playing for fun. Heaven's Shadow is a League of Legends community on Discord. eaven's Shadow's goal is to become the best community it can be and create a positive experience for all of our members. Everybody in Heaven's Shadow is just looking for a good time and become a better player. ",
+        description: "Feeder, Bronze, Challenger, Pro player, noob, or just playing for fun. Heaven's Shadow is a League of Legends community on Discord. Heaven's Shadow's goal is to become the best community it can be and create a positive experience for all of our members. Everybody in Heaven's Shadow is just looking for a good time and to become a better player. ",
         fields: [{
             name: "How to begin!",
             value: "In order to have access to all our content, please verify yourself by contacting @staff in #verication_channel!"
@@ -26,7 +26,7 @@ bot.on('guildMemberAdd', member => {
         },
         {
             name: "Privilages of being verfied!",
-            value: "- Access to all member channels" + "\n" + "- Giveaways" + "\n" + "- Tournaments" + "\n" + "- Tournaments" + "\n" + "Future features will be implmented in the future."
+            value: "- Access to all member channels" + "\n" + "- Giveaways" + "\n" + "- Tournaments" + "\n" + "More features will be implimented in the future."
         },
         {
             name: "Commands",
