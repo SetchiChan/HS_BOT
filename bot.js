@@ -8,8 +8,51 @@ const TOKEN = "x";
 
 //sending dm
 bot.on('guildMemberAdd', member => {
-    member.send("Welcome to the server!");
- });
+    message.channel.send({embed: {
+        color: 10038562,
+        author: {
+            name: bot.user.username,
+            icon_url: bot.user.avatarURL
+        },
+        title: "Welcome to heaven's Shadow!",
+        description: "Feeder, Bronze, Challenger, Pro player, noob, or just playing for fun. Heaven's Shadow is a League of Legends community on Discord. eaven's Shadow's goal is to become the best community it can be and create a positive experience for all of our members. Everybody in Heaven's Shadow is just looking for a good time and become a better player. ",
+        fields: [{
+            name: "How to begin!",
+            value: "In order to have access to all our content, please verify yourself by contacting @staff in #verication_channel!"
+        },
+        {
+            name: "Verication Questions",
+            value: "Please answer the following questions on this channel so that you may be verified on our server:",
+            value: "1.What is your current in game name?",
+            value: "2.Are you over 18 years old?",
+            value: "3.What is your current rank as of season 7? (Example: Gold 4)",
+            value: "4.What are your prefered roles. [Please pick 2] (Example: Top/Bottom)",
+            value: "5.What is your region. [NA/EUW ONLY] (We will expand to other regions in the future."
+        },
+        {
+            name: "Privilages of being verfied!",
+            value: "- Access to all member channels",
+            value: "- Giveaways",
+            value: "- Tournaments",
+            value: "Future features will be implmented in the future."
+        },
+        {
+            name: "Commands",
+            value: "For our commands, do 'help"
+        },
+        {
+            name: "Welcome to our server!",
+            value: "Hope to see you around!"
+        }
+    ],
+    timestamp: new Date(),
+    footer: {
+        icon_url: bot.user.avatarURL,
+        text: "@HS Guardian#3033"
+        }
+    }   
+})
+});
 
 //AutoAssign Rank
 bot.on('guildMemberAdd', (member) => {
@@ -20,7 +63,7 @@ bot.on('guildMemberAdd', (member) => {
 
 //Welcome message.
 bot.on('guildMemberAdd', member => {
-    setTimeout(() => { bot.channels.get('399041704604467212').sendMessage(member + " has joined Heaven's Shaddow! Please visit #verification_channel to verify yourself!"); }, 3000);
+    setTimeout(() => { bot.channels.get('399041704604467212').sendMessage(member + " has joined Heaven's Shadow! Please check your direct message for more details."); }, 3000);
 });
 
 //Staff notification of new user
