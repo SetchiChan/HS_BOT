@@ -44,22 +44,11 @@ bot.on('guildMemberAdd', member => {
         }
     }   
 })
-});
-
-//AutoAssign Rank
-bot.on('guildMemberAdd', (member) => {
-    setTimeout(() => { member.addRole(member.guild.roles.find("name", "Elite Guardian [Original Member]🎽")); }, 3000);
-
-    setTimeout(() => { member.setNickname("🆕" + member.displayName); }, 3000);
-});
-
-//Welcome message.
-bot.on('guildMemberAdd', member => {
-    setTimeout(() => { bot.channels.get('399041704604467212').sendMessage(member + " has joined Heaven's Shadow! Please check your direct messages for more information!"); }, 3000);
-});
-
-//Staff notification of new user
-bot.on('guildMemberAdd', member => {
+    //set rank of new user
+    setTimeout(() => { member.addRole(member.guild.roles.find("name", "Guardian [Member]🔰")); }, 3000);
+    //Set display name of user
+    member.setNickname("🆕" + member.displayName);
+    //Notify Staff of User join
     setTimeout(() => { bot.channels.get('399039851288068096').sendMessage(member + " has joined the Heaven Shadow. Please contact them for orientation!"); }, 3000);
 });
 
