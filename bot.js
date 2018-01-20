@@ -50,6 +50,8 @@ bot.on('guildMemberAdd', member => {
     member.setNickname("🆕" + member.displayName);
     //Notify Staff of User join
     setTimeout(() => { bot.channels.get('399039851288068096').sendMessage(member + " has joined the Heaven Shadow. Please contact them for orientation!"); }, 3000);
+    //Notify #New-Members Channel
+    setTimeout(() => { bot.channels.get('399041704604467212').sendMessage(member + " has joined the Heaven Shadow. Please check your direct messages for more information!"); }, 3000);
 });
 
 //Staff notification user has left
