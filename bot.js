@@ -83,24 +83,28 @@ bot.on("message", function(message) {
             message.channel.sendMessage("Pong!");
             break;
         case "verify":
-            message.channel.send({embed: { 
-                color: 10038562,
-                author: {
-                    name: bot.user.username,
-                    icon_url: bot.user.avatarURL
-                },
-                title: "Verification System",
-                description: "================",
-                fields: [{
-                    name: "How to start!",
-                    value: "Hello summoner, welcome to the verification process. If an error occurs during this process, you will have to restart the process. If you are unable to verify yourself, please contact @Staff. Press select the emoticon below to continue your verfication."
+            if (message.member.roles.has("name", "Verified✔️")) {
+                message.channel.sendMessage(member + "you seem to be already verified. If you'd like to change your prefered lane roles, do 'pref. If you'd like to update your current rank, do 'Rankupdate. If you believe an error has occured, please contact @Staff⚙ to help you");
+            } else {
+                message.channel.send({embed: { 
+                    color: 10038562,
+                    author: {
+                        name: bot.user.username,
+                        icon_url: bot.user.avatarURL
+                    },
+                    title: "Verification System",
+                    description: "================",
+                    fields: [{
+                        name: "How to start!",
+                        value: "Hello summoner, welcome to the verification process. If an error occurs during this process, you will have to restart the process. If you are unable to verify yourself, please contact @Staff. Press select the emoticon below to continue your verfication."
+                    }
+                ],
                 }
-            ],
-            }
-        })
-        .then(function (message) {
-            message.react('404452656220864512')
-        });
+            })
+            .then(function (message) {
+                message.react('404452656220864512')
+            })
+            };
         break;
         case "help":
             message.channel.send({embed: {
