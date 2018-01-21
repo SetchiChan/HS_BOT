@@ -83,7 +83,7 @@ bot.on("message", function(message) {
             message.channel.sendMessage("Pong!");
             break;
         case "verify":
-            setTimeout(() => { message.channel.send({embed: { 
+            message.channel.send({embed: { 
                 color: 10038562,
                 author: {
                     name: bot.user.username,
@@ -97,9 +97,8 @@ bot.on("message", function(message) {
                 }
             ],
             }
-        }, 3000);
         })
-        .then(() => message.react('404452656220864512'))
+        setTimeout(() => { then(() => message.react('404452656220864512')); }, 3000,);
         break;
         case "help":
             message.channel.send({embed: {
