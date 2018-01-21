@@ -82,16 +82,28 @@ bot.on("message", function(message) {
         case "ping":
             message.channel.sendMessage("Pong!");
             break;
-        case "pref":
-            message.channel.sendMessage("Command does not work. 'pref is in progress.")
-            .then(() => message.react('399268521776906241'))
-            .then(() => message.react('399268521646882816'))
-            .then(() => message.react('399268521638494208'))
-            .then(() => message.react('399268521420521474'))
-            .then(() => message.react('399268521613328384'))
-            .then(() => message.react('399268521260875778'))
-            .catch(() => console.error('One of the emojis failed to react.'));
-            break;
+        case "verify":
+            message.channel.send({embed: {
+                color: 10038562,
+                author: {
+                    name: bot.user.username,
+                    icon_url: bot.user.avatarURL
+                },
+                title: "Verification System",
+                description: "================",
+                fields: [{
+                    name: "How to start!",
+                    value: "Lists all available commands"
+                }
+            ],
+            timestamp: new Date(),
+            footer: {
+                icon_url: bot.user.avatarURL,
+                text: "@HS Guardian#3033"
+                }
+            }   
+        })
+        break;
         case "help":
             message.channel.send({embed: {
                 color: 10038562,
