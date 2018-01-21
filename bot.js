@@ -83,7 +83,7 @@ bot.on("message", function(message) {
             message.channel.sendMessage("Pong!");
             break;
         case "verify":
-            if (member.guild.roles.has("name", "Verified✔️")) {
+            if (message.member.roles.find("name", "Verified✔️")) {
                 message.channel.sendMessage(member + "you seem to be already verified. If you'd like to change your prefered lane roles, do 'pref. If you'd like to update your current rank, do 'Rankupdate. If you believe an error has occured, please contact @Staff⚙ to help you");
             } else {
                 message.channel.send({embed: { 
@@ -104,7 +104,7 @@ bot.on("message", function(message) {
             .then(function (message) {
                 message.react('404452656220864512')
             })
-            };
+            }
         break;
         case "help":
             message.channel.send({embed: {
