@@ -93,11 +93,12 @@ bot.on("message", function(message) {
                 description: "================",
                 fields: [{
                     name: "How to start!",
-                    value: "Lists all available commands"
+                    value: "Hello summoner, welcome to the verification process. If an error occurs during this process, you will have to restart the process. If you are unable to verify yourself, please contact @Staff⚙️ Press select the emoticon below to continue your verfication."
                 }
             ],
             }   
         })
+        .then(() => message.react('404452656220864512'))
         break;
         case "help":
             message.channel.send({embed: {
