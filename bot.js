@@ -100,8 +100,6 @@ bot.on("message", function(message) {
         })
         .then(function (message) {
             message.react('399268521776906241')
-            message.pin()
-            message.delete()
         });
         break;
         case "help":
