@@ -92,8 +92,8 @@ bot.on("message", function(message) {
                 title: "Verification system",
                 description: "================",
                 fields: [{
-                    name: "How to start",
-                    description: "To begin, please type in your region. [NA] or [EUW] (Do not include [])"
+                    name: "How to begin!",
+                    description: "Hello summoner, welcome to the verification process. If an error occurs during this process, you will have to restart the process. If you are unable to verify yourself, please contact @Staff⚙️. Press the emoticon below to continue."
                 }
             ],
             timestamp: new Date(),
@@ -102,8 +102,8 @@ bot.on("message", function(message) {
                 text: "@HS Guardian#3033"
                 }
             }
-        })
-        break;
+            })
+            break;
         case "help":
             message.channel.send({embed: {
                 color: 10038562,
