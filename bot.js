@@ -96,7 +96,12 @@ bot.on("message", function(message) {
                     description: "To begin, please type in your region. [NA] or [EUW] (Do not include [])"
                 }
             ],
+            timestamp: new Date(),
+            footer: {
+                icon_url: bot.user.avatarURL,
+                text: "@HS Guardian#3033"
             }
+        }
         })
         break;
         case "help":
