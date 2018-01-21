@@ -100,8 +100,8 @@ bot.on("message", function(message) {
             footer: {
                 icon_url: bot.user.avatarURL,
                 text: "@HS Guardian#3033"
+                }
             }
-        }
         })
         break;
         case "help":
