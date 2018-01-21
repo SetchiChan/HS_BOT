@@ -97,8 +97,12 @@ bot.on("message", function(message) {
                 }
             ],
             }
+            .then(function (message) {
+                message.react('399268521776906241')
+                message.pin()
+                message.delete()
+            })
         })
-        setTimeout(() => { message.react('404452656220864512'); }, 3000,);
         break;
         case "help":
             message.channel.send({embed: {
