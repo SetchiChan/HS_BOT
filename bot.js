@@ -96,11 +96,6 @@ bot.on("message", function(message) {
                     value: "Lists all available commands"
                 }
             ],
-            timestamp: new Date(),
-            footer: {
-                icon_url: bot.user.avatarURL,
-                text: "@HS Guardian#3033"
-                }
             }   
         })
         break;
