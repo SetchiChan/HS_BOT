@@ -84,7 +84,7 @@ bot.on("message", function(message) {
             break;
         case "verify":
             if (message.member.roles.find("name", "Verified✔️")) {
-                message.channel.sendMessage("You seem to be already verified. If you'd like to change your prefered lane roles, do 'pref. If you'd like to update your current rank, do 'Rankupdate. If you believe an error has occured, please contact @Staff⚙ to help you");
+                message.channel.sendMessage("You seem to be already verified. If you'd like to change your prefered lane roles, do 'pref. If you'd like to update your current rank, do 'Rankupdate. If you believe an error has occured, please contact @&399009797921308674 to help you");
             } else {
                 message.channel.send({embed: { 
                     color: 10038562,
