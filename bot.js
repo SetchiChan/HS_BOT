@@ -98,7 +98,7 @@ bot.on("message", function(message) {
             ],
             }
         })
-        setTimeout(() => { .then(() => message.react('404452656220864512')); }, 3000,);
+        setTimeout(() => { message.react('404452656220864512'); }, 3000,);
         break;
         case "help":
             message.channel.send({embed: {
