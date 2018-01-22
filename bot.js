@@ -101,15 +101,12 @@ bot.on("message", function(message) {
                 ],
                 }
             })
-            const collector = message.createReactionCollector((reaction, user) => 
-                user.id === message.author.id &&
-                reaction.emoji.name === "◀" 
-            ).once("collect", reaction => {
-                const chosen = reaction.emoji.name;
-                if(chosen === "◀"){
-                     message.channel.sendMessage("fak you")
+            .then('messageReactionAdd', function (message) {
+                message.react('404452656220864512')
+
+                if (member.react('404452656220864512')) {
+                    message.channel.sendMessage("test")
                 }
-                collector.stop();
             })
             };
         break;
