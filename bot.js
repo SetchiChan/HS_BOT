@@ -101,15 +101,13 @@ bot.on("message", function(message) {
                 ],
                 }
             })
-            const collector = message.createReactionCollector((reaction,user) =>
-            reaction.emoji.id === "404452656220864512"
-        ).once("collect", reaction => {
-            const chosen = reaction.emoji.id;
-            if (chosen === "404452656220864512"){
-                message.channel.sendMessage("LOL, GET WREKT M8")
-            }
-            collector.stop();
-        })
+            bot.on('messageReactionAdd', (reaction, user) => {
+                message.react('404452656220864512')
+                
+                if (member.reaction('404452656220864512')) {
+                    message.channel.send("Fak")
+                }
+            })
             };
         break;
         case "help":
