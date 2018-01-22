@@ -1,5 +1,3 @@
-import { ReactionEmoji } from 'discord.js';
-
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
@@ -105,10 +103,6 @@ bot.on("message", function(message) {
             })
             .then(function (message) {
                 message.react('404452656220864512')
-
-                if (ReactionEmoji.member.reaction.find('404452656220864512')) {
-                    message.channel.sendMessage("LOL")
-                }
             })
             };
         break;
