@@ -104,7 +104,7 @@ bot.on("message", function(message) {
             .then(function (message) {
                 message.react('404452656220864512')
 
-                if (member.reaction = reaction.id('404452656220864512')) {
+                if (member.reaction('404452656220864512')) {
                     message.channel.sendMessage("LOL")
                 }
             })
