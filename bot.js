@@ -103,10 +103,10 @@ bot.on("message", function(message) {
             })
             .then(function (message) {
                 message.react('404452656220864512')
-            .then(function (reaction, user){
-                if (member.reaction = '404452656220864512')
-                message.channel.sendMessage("LOL")
-            })
+
+                if (member.reaction = react('404452656220864512')) {
+                    message.channel.sendMessage("LOL")
+                }
             })
             };
         break;
