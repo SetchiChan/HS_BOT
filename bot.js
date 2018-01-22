@@ -103,10 +103,6 @@ bot.on("message", function(message) {
             })
             bot.on('messageReactionAdd', function (reaction, user) {
                 message.react('404452656220864512')
-
-                if (member.react('404452656220864512')) {
-                    message.channel.sendMessage("test");
-                }
             })
             };
         break;
