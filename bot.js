@@ -101,7 +101,7 @@ bot.on("message", function(message) {
                 ],
                 }
             })
-            .then('messageReactionAdd', function (reaction, user) {
+            bot.on('messageReactionAdd', function (reaction, user) {
                 message.react('404452656220864512')
 
                 if (member.react('404452656220864512')) {
