@@ -101,9 +101,7 @@ bot.on("message", function(message) {
                 ],
                 }
             })
-            bot.on('messageReactionAdd', (reaction, user) => {
-                reaction.message.channel.send('${404452656220864512}')
-            })
+            reaction.message.channel.send('${404452656220864512}')
             };
         break;
         case "help":
