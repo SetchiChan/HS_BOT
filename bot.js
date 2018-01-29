@@ -103,10 +103,10 @@ bot.on("message", function(message) {
             })
             message.createReactionCollector((reaction, user) =>
             user.id === message.author.id &&
-            message.react('399268521776906241')
+            message.react === '399268521776906241'
         ).once("collect", reaction => {
                 const chosen = message.react;
-                if(chosen === ('399268521776906241')){
+                if(chosen === '399268521776906241'){
                     message.channel.send("Fuck")
                 }else{
                     message.channel.send("Nope")
