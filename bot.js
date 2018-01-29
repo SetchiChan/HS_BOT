@@ -101,18 +101,16 @@ bot.on("message", function(message) {
                 ],
                 }
             })
-            .then(function (message) {
-                const collector = message.createReactionCollector((reaction, user) =>
-                user.id === message.author.id &&
-                message.react === ('404452656220864512')
+            const collector = message.createReactionCollector((reaction, user) =>
+            user.id === message.author.id &&
+            message.react === ('404452656220864512')
             ).once("collect", reaction => {
-                    const chosen = message.react;
-                    if(chosen === '404452656220864512'){
-                        message.channel.send("Fuck")
-                    }
-                    collector.stop();
+                const chosen = message.react;
+                if(chosen === '404452656220864512'){
+                    message.channel.send("Fuck")
+                }
+                collector.stop();
                 })
-            })
             };
         break;
         case "help":
