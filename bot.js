@@ -6,6 +6,8 @@ const newUser = [];
 const PREFIX = "'";
 const TOKEN = "x";
 
+const collector = message.createReactionCollector(reaction, user);
+
 //sending dm
 bot.on('guildMemberAdd', member => {
     member.send({embed: {
@@ -101,21 +103,15 @@ bot.on("message", function(message) {
                 ],
                 }
             })
-            const collector = message.createReactionCollector((reaction, user) => 
-            user.id === message.author.id &&
-            reaction.emoji.name === "◀" ||
-            reaction.emoji.name === "▶" ||
-            reaction.emoji.name === "❌"
-            ).once("collect", reaction => {
-            const chosen = reaction.emoji.name;
-            if(chosen === "◀"){
-                message.channel.send("Report")
-            }else if(chosen === "▶"){
-                message.channel.send("Report 1")
-            }else{
-                message.channel.send("You")
-            }
-             collector.stop();
+            .then(function (message) {
+                message.react('404452656220864512')
+                once("collect", reaction => {
+                    const chosen = message.react;
+                    if(chosen === '404452656220864512'){
+                        message.channel.send("Fuck")
+                    }
+                    collector.stop();
+                })
             })
             };
         break;
