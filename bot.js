@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-
 const newUser = [];
-
 const PREFIX = "'";
 const TOKEN = "x";
+const chosen = reaction.emoji.name;
+const collector = message.createReactionCollector(reaction, user);
 
 //sending dm
 bot.on('guildMemberAdd', member => {
@@ -101,8 +101,19 @@ bot.on("message", function(message) {
                 ],
                 }
             })
-            .then(function (message) {
-                message.react('404452656220864512')
+            user.id === message.author.id &&
+            reaction.emoji.name === "◀" ||
+            reaction.emoji.name === "▶" ||
+            reaction.emoji.name === "❌"
+            once("collect", reaction => {
+                if(chosen ==="◀"){
+                    message.channel.send("Report")
+                }else if (chosen === "▶"){
+                    message.channel.send("Dunno")
+                }else{
+                    message.channel.send("dunno boi")
+                }
+                collector.stop();
             })
             };
         break;
