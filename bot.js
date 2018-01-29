@@ -6,8 +6,6 @@ const newUser = [];
 const PREFIX = "'";
 const TOKEN = "x";
 
-const collector = message.createReactionCollector(reaction, user);
-
 //sending dm
 bot.on('guildMemberAdd', member => {
     member.send({embed: {
@@ -104,8 +102,9 @@ bot.on("message", function(message) {
                 }
             })
             .then(function (message) {
+                const collector = message.createReactionCollector((reaction, user) =>
                 message.react('404452656220864512')
-                once("collect", reaction => {
+            ).once("collect", reaction => {
                     const chosen = message.react;
                     if(chosen === '404452656220864512'){
                         message.channel.send("Fuck")
