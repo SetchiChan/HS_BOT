@@ -103,10 +103,10 @@ bot.on("message", function(message) {
             })
             const collector = message.createReactionCollector((reaction, user) =>
             user.id === message.author.id &&
-            reaction.emoji.name === "404452656220864512"
+            reaction.emoji.name === "❌"
             ).once("collect", reaction => {
                 const chosen = message.react;
-                if(chosen === "404452656220864512"){
+                if(chosen === "❌"){
                     message.channel.send("Fuck")
                 }
                 collector.stop();
