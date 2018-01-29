@@ -105,7 +105,7 @@ bot.on("message", function(message) {
             user.id === message.author.id &&
             reaction.emoji.name === "❌"
             ).once("collect", reaction => {
-                const chosen = message.react;
+                const chosen = reaction.emoji.name;
                 if(chosen === "❌"){
                     message.channel.send("Fuck")
                 }
