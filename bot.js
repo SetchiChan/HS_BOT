@@ -101,23 +101,14 @@ bot.on("message", function(message) {
                 ],
                 }
             })
-            .then(message.createReactionCollector((reaction, user) =>
-            user.id === message.author.id &&
-            message.react === '399268521776906241'
-        ).once("collect", reaction => {
-                const chosen = message.react;
-                if(chosen === '399268521776906241'){
-                    message.channel.send("Fuck")
-                }else{
-                    message.channel.send("Nope")
+            .then(function (message) {
+                message.react('404452656220864512')
+                const chosen = mesage.react;
+                if(chosen = '404452656220864512'){
+                    message.channel.send("Lol")
                 }
-                collector.stop();
-                })
-            )
+            })
             };
-        break;
-        case "welp":
-            bot.channels.get('399039851288068096').sendMessage("@setchichan#4281 has left Heaven Shadow.")
         break;
         case "help":
             message.channel.send({embed: {
