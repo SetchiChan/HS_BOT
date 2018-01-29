@@ -1,5 +1,3 @@
-import { MessageReaction } from 'discord.js';
-
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
@@ -103,10 +101,11 @@ bot.on("message", function(message) {
                 ],
                 }
             })
-            .then(function (message) {
+            bot.on('messageReactionAdd', (reaction, user) => {
                 message.react('404452656220864512')
-                if(value.react('404452656220864512') = 2){
-                    message.channel.send("Fuck")
+                const chosen = message.react;
+                if (Chosen = ('404452656220864512')) {
+                    message.channel.send("Stap")
                 }
             })
             };
