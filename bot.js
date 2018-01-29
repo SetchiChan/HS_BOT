@@ -101,7 +101,7 @@ bot.on("message", function(message) {
                 ],
                 }
             })
-            message.createReactionCollector((reaction, user) =>
+            .then(message.createReactionCollector((reaction, user) =>
             user.id === message.author.id &&
             message.react === '399268521776906241'
         ).once("collect", reaction => {
@@ -113,6 +113,7 @@ bot.on("message", function(message) {
                 }
                 collector.stop();
                 })
+            )
             };
         break;
         case "welp":
