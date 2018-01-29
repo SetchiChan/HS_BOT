@@ -86,6 +86,7 @@ bot.on("message", function(message) {
             if (message.member.roles.find("name", "Verified✔️")) {
                 message.channel.sendMessage("You seem to be already verified. If you'd like to change your prefered lane roles, do 'pref. If you'd like to update your current rank, do 'Rankupdate. If you believe an error has occured, please contact <@&399009797921308674> to help you.");
             } else {
+                bot.on('messageReactionAdd', (reaction, user) => {
                 message.channel.send({embed: { 
                     color: 10038562,
                     author: {
@@ -101,11 +102,10 @@ bot.on("message", function(message) {
                 ],
                 }
             })
-            bot.on('messageReactionAdd', (reaction, user) => {
-                message.react('404452656220864512')
-                const chosen = message.react;
-                if (Chosen = ('404452656220864512')) {
-                    message.channel.send("Stap")
+            message.react('404452656220864512')
+            const chosen = message.react;
+            if (Chosen = ('404452656220864512')) {
+                message.channel.send("Stap")
                 }
             })
             };
