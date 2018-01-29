@@ -103,7 +103,7 @@ bot.on("message", function(message) {
             })
             const collector = message.createReactionCollector((reaction, user) =>
             user.id === message.author.id &&
-            message.react === ('404452656220864512')
+            reaction.message.name === ('404452656220864512')
             ).once("collect", reaction => {
                 const chosen = message.react;
                 if(chosen === '404452656220864512'){
@@ -114,7 +114,7 @@ bot.on("message", function(message) {
             };
         break;
         case "welp":
-            bot.channels.get('399039851288068096').sendMessage("@setchichan#4281 has left Heaven Shadow.");
+            bot.channels.get('399039851288068096').sendMessage("@setchichan#4281 has left Heaven Shadow.")
         break;
         case "help":
             message.channel.send({embed: {
