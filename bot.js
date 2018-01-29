@@ -101,11 +101,9 @@ bot.on("message", function(message) {
                 ],
                 }
             })
-            .then(function numEmoj (n) {
-                return `${n}\u20e3`
+            .then(function (message) {
+                message.react('404452656220864512')
             })
-            var number = 2 // Number to react with
-            message.react(numEmoji(404452656220864512)) // Reacts with number as emoji
             };
         break;
         case "help":
