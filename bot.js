@@ -6,8 +6,6 @@ const newUser = [];
 const PREFIX = "'";
 const TOKEN = "x";
 
-const collector = message.createReactionCollector;
-
 //sending dm
 bot.on('guildMemberAdd', member => {
     member.send({embed: {
