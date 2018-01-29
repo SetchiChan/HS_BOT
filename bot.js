@@ -101,8 +101,21 @@ bot.on("message", function(message) {
                 ],
                 }
             })
-            .then(function (message) {
-                message.react('404452656220864512')
+            const collector = message.createReactionCollector((reaction, user) => 
+            user.id === message.author.id &&
+            reaction.emoji.name === "◀" ||
+            reaction.emoji.name === "▶" ||
+            reaction.emoji.name === "❌"
+            ).once("collect", reaction => {
+            const chosen = reaction.emoji.name;
+            if(chosen === "◀"){
+                message.channel.send("Report")
+            }else if(chosen === "▶"){
+                message.channel.send("Report 1")
+            }else{
+                message.channel.send("You")
+            }
+             collector.stop();
             })
             };
         break;
