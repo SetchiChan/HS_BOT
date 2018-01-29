@@ -103,9 +103,8 @@ bot.on("message", function(message) {
             })
             .then(function (message) {
                 message.react('404452656220864512')
-                const chosen = mesage.react;
-                if(chosen = '404452656220864512'){
-                    message.channel.send("Lol")
+                if(message.react('404452656220864512').value = 2){
+                    message.channel.send("Fuck cares")
                 }
             })
             };
