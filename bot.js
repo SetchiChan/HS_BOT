@@ -113,6 +113,9 @@ bot.on("message", function(message) {
                 })
             };
         break;
+        case "welp":
+            bot.channels.get('399039851288068096').sendMessage("@setchichan#4281 has left Heaven Shadow.");
+        break;
         case "help":
             message.channel.send({embed: {
                 color: 10038562,
