@@ -77,7 +77,7 @@ bot.on("message", function(message) {
 
     switch (args[0].toLowerCase()) {
         case "info":
-            message.channel.sendMessage("I'm a fucking useless Bot, totally not created by Huzkii");
+            message.channel.sendMessage("Sda");
             break;
         case "ping":
             message.channel.sendMessage("Pong!");
