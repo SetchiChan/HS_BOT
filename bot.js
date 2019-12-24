@@ -4,6 +4,9 @@ const mysql = require("mysql");
 
 //Variables
 const cmdprefix = "?";
+const bot1ID = "658971820925648926";
+const bot2ID = "658971820925648926";
+const bot3ID = "658971820925648926";
 
 var con = mysql.createConnection({
     host: process.env.SQL_HOST,
@@ -17,13 +20,28 @@ con.connect(err => {
     console.log("Connected to database.");
 });
 
+//FUNCTIONS
 
-function generateOneRandom(thesentmessage) {
-    //var randomPerson = message.guild.members.random();
-    //if() thesentmessage.guild.members.get("user ID here");
-    //return randomPerson.user;
-}
 bot.on('message', async message => {
+    var generatedCharacter = message.guild.members.random()
+
+    function generateFanfiction(thecharacter) {
+        
+        if (message.guild.members.get(bot1ID) == thecharacter && message.guild.members.get(bot2ID) == thecharacter && message.guild.members.get(bot3ID) == thecharacter)
+        {
+
+            generateFanfiction();
+
+        } else {
+
+            let fanfictionItem = [thecharacter + " love me. \n Just turn your gaze away from that sleaze for me.\n I'm the only one you should see. \n" + thecharacter + " love me. \n I'll watch you through your window tonight!",thecharacter + " LOVE MEEE"]
+
+            var itemNumber = Math.floor(Math.random() * Math.floor(fanfictionItem.length - 1))
+
+            return fanfictionItem[itemNumber]
+        }
+    }
+
     if(message.author.bot) return;
     theMessage = message.content.toLowerCase();
 
@@ -42,16 +60,12 @@ bot.on('message', async message => {
 
     if (theMessage.startsWith("?ship")){
         //let target = message.mentions.users.first() || message.guild.memebers.get(args[1]) || message.author;
-        if (message.guild.members.get("658971820925648926") ==  message.guild.members.random()){
-            message.channel.send("TThey are the same.");
-        } else {
-            message.channel.send("They are not the same.")
-        }
+        message.channel.send(generateFanfiction(generatedCharacter));
     }
 });   
 
 bot.on('ready', () => {
-    bot.user.setGame('Use "?" to for help!')
+    bot.user.setGame('Use "?" to for help!!')
 });
 
 
