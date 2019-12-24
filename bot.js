@@ -17,6 +17,12 @@ con.connect(err => {
     console.log("Connected to database.");
 });
 
+
+function generateOneRandom(thesentmessage) {
+    //var randomPerson = message.guild.members.random();
+    //if() thesentmessage.guild.members.get("user ID here");
+    //return randomPerson.user;
+}
 bot.on('message', async message => {
     if(message.author.bot) return;
     theMessage = message.content.toLowerCase();
@@ -32,6 +38,15 @@ bot.on('message', async message => {
             fields: []
             }
        })
+    }
+
+    if (theMessage.startsWith("?ship")){
+        //let target = message.mentions.users.first() || message.guild.memebers.get(args[1]) || message.author;
+        if (message.guild.members.get("user ID here") ==  message.guild.members.random()){
+            message.channel.send("TThey are the same.");
+        } else {
+            message.channel.send("They are not the same.")
+        }
     }
 });   
 
