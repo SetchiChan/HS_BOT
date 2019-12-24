@@ -21,7 +21,7 @@ bot.on('message', async message => {
     if(message.author.bot) return;
     theMessage = message.content.toLowerCase();
 
-    if (message.content.startsWith(cmdprefix)){
+    if (message.content == cmdprefix){
         message.author.send({embed: {
             author: {
                 name: "Earth-Chan",
@@ -36,7 +36,7 @@ bot.on('message', async message => {
 });   
 
 bot.on('ready', () => {
-    bot.user.setGame('Use "?" to for help!')
+    bot.user.setGame('Use "?" to for help!!')
 });
 
 
