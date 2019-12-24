@@ -27,14 +27,14 @@ bot.on('message', async message => {
 
     function generateFanfiction(thecharacter) {
         
-        if (message.guild.members.get(bot1ID) == thecharacter && message.guild.members.get(bot2ID) == thecharacter && message.guild.members.get(bot3ID) == thecharacter)
+        if (message.guild.members.get(bot1ID) == thecharacter && message.guild.members.get(bot2ID) == thecharacter && message.guild.members.get(bot3ID) == thecharacte && message.author == thecharacter)
         {
 
             generateFanfiction();
 
         } else {
 
-            let fanfictionItem = ["[Sing to the tune of 'Santa Baby']\n" + thecharacter + " love me. \n Just turn your gaze away from that sleaze for me.\n I'm the only one you should see. \n" + thecharacter + " love me. \n I'll watch you through your window tonight!",thecharacter + " LOVE MEEE"]
+            let fanfictionItem = ["[Sing to the tune of 'Santa Baby']\n\n" + thecharacter + " love me. \n Just turn your gaze away from that sleaze for me.\n I'm the only one you should see. \n" + thecharacter + " love me. \n I'll watch you through your window tonight!",thecharacter + " LOVE MEEE",thecharacter + "UwU"]
 
             var itemNumber = Math.floor(Math.random() * Math.floor(fanfictionItem.length))
 
