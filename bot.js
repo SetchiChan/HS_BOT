@@ -60,7 +60,16 @@ bot.on('message', async message => {
 
     if (theMessage.startsWith("?ship")){
         //let target = message.mentions.users.first() || message.guild.memebers.get(args[1]) || message.author;
-        message.channel.send(generateFanfiction(generatedCharacter));
+        message.author.send({embed: {
+            author: {
+                name: "Earth-Chan",
+                icon_url: "https://vignette.wikia.nocookie.net/virtualyoutuber/images/f/f2/EarthChan.jpg/revision/latest?cb=20180527004331"
+            },
+            description: generateFanfiction(generatedCharacter),
+            color: 59431,
+            fields: []
+            }
+       })
     }
 });   
 
