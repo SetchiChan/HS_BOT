@@ -34,9 +34,9 @@ bot.on('message', async message => {
 
         } else {
 
-            let fanfictionItem = [thecharacter + " love me. \n Just turn your gaze away from that sleaze for me.\n I'm the only one you should see. \n" + thecharacter + " love me. \n I'll watch you through your window tonight!",thecharacter + " LOVE MEEE"]
+            let fanfictionItem = ["[Sing to the tune of 'Santa Baby']\n" + thecharacter + " love me. \n Just turn your gaze away from that sleaze for me.\n I'm the only one you should see. \n" + thecharacter + " love me. \n I'll watch you through your window tonight!",thecharacter + " LOVE MEEE"]
 
-            var itemNumber = Math.floor(Math.random() * Math.floor(fanfictionItem.length - 1))
+            var itemNumber = Math.floor(Math.random() * Math.floor(fanfictionItem.length))
 
             return fanfictionItem[itemNumber]
         }
