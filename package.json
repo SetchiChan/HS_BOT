@@ -1,14 +1,15 @@
 {
-  "name": "hsbot",
+  "name": "lovebot",
   "version": "1.0.0",
   "description": "",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
   },
-  "author": "SetchiChan",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.2.1"
+    "discord.js": "^11.5.1",
+    "mysql": "^2.17.1"
   }
 }
