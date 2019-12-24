@@ -42,7 +42,7 @@ bot.on('message', async message => {
 
     if (theMessage.startsWith("?ship")){
         //let target = message.mentions.users.first() || message.guild.memebers.get(args[1]) || message.author;
-        if (message.guild.members.get("user ID here") ==  message.guild.members.random()){
+        if (message.guild.members.get("658971820925648926") ==  message.guild.members.random()){
             message.channel.send("TThey are the same.");
         } else {
             message.channel.send("They are not the same.")
@@ -51,7 +51,7 @@ bot.on('message', async message => {
 });   
 
 bot.on('ready', () => {
-    bot.user.setGame('Use "?" to for help!!')
+    bot.user.setGame('Use "?" to for help!')
 });
 
 
