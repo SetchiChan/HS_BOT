@@ -21,7 +21,7 @@ bot.on('message', async message => {
     if(message.author.bot) return;
     theMessage = message.content.toLowerCase();
 
-    if (message.content == cmdprefix){
+    if (message.content.startsWith(cmdprefix)){
         message.author.send({embed: {
             author: {
                 name: "Earth-Chan",
