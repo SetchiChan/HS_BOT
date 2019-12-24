@@ -60,7 +60,7 @@ bot.on('message', async message => {
 
     if (theMessage.startsWith("?ship")){
         //let target = message.mentions.users.first() || message.guild.memebers.get(args[1]) || message.author;
-        message.author.send({embed: {
+        message.channel.send({embed: {
             author: {
                 name: "Earth-Chan",
                 icon_url: "https://vignette.wikia.nocookie.net/virtualyoutuber/images/f/f2/EarthChan.jpg/revision/latest?cb=20180527004331"
@@ -74,7 +74,7 @@ bot.on('message', async message => {
 });   
 
 bot.on('ready', () => {
-    bot.user.setGame('Use "?" to for help!!')
+    bot.user.setGame('Use "?" to for help!')
 });
 
 
