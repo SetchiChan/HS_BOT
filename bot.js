@@ -71,6 +71,37 @@ bot.on('message', async message => {
             }
        })
     }
+
+    if (theMessage.startsWith("?shop")){
+        message.channel.send({embed: {
+            color: 0x0099ff,
+            title: 'The Shop De Shop',
+            description: 'Feel free to shop. You currently have 0 credits.',
+            fields: [
+                {
+                    name: 'A Hug',
+                    value: 'Cost: Free',
+                },
+                {
+                    name: 'A Pencil (May or may not have led)',
+                    value: 'Cost: 150 Credits',
+                },
+                {
+                    name: 'A Cookie',
+                    value: 'Cost: 1500 Credits',
+                },
+                {
+                    name: 'Lunch from the Cafeteria',
+                    value: 'Cost: 5000 Credits',
+                },
+                {
+                    name: 'More Stuff will be added...',
+                    value: '...',
+                },
+            ],
+        }
+        });     
+    }
 });   
 
 bot.on('ready', () => {
