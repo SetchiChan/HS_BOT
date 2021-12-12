@@ -56,11 +56,11 @@ bot.on('message', async message => {
             color: 59431,
             fields: [],
             image: {
-		        url: 'https://i.imgur.com/2ctZ1jf.png',
+		        url: 'https://i.imgur.com/LpcfEhS.png',
 	        },
 	        timestamp: new Date(),
 	        footer: {
-		        text: 'Last updated by RadenSkies 13 minutes ago.',
+		        text: 'Last updated by RadenSkies 4 minutes ago.',
 		        icon_url: 'https://i.imgur.com/AfFp7pu.png',
 	        },
             }
