@@ -45,6 +45,27 @@ bot.on('message', async message => {
             }
        })
     }
+    
+    if (message.content == "?blast"){
+        message.channel.send({embed: {
+            author: {
+                name: "The Sailor of The Swamp",
+                icon_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw7EENWb58bGv-T4d1xzULdmG7vEtts08cExUMvWBeWWa2uUsMZWh-bSzQ3JnuEVELxb0&usqp=CAU"
+            },
+            description: "Current Avalonian transport for bog. NOTE: 'There is a 5 minute delay between each picture update.'",
+            color: 59431,
+            fields: [],
+            image: {
+		        url: 'https://i.imgur.com/AfFp7pu.png',
+	        },
+	        timestamp: new Date(),
+	        footer: {
+		        text: 'Some footer text here',
+		        icon_url: 'https://i.imgur.com/AfFp7pu.png',
+	        },
+            }
+       })
+    }
 
     if (theMessage.startsWith("?shop")){
         message.channel.send({embed: {
