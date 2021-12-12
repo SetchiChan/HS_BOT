@@ -8,18 +8,6 @@ const bot1ID = "658971820925648926";
 const bot2ID = "658971820925648926";
 const bot3ID = "658971820925648926";
 
-var con = mysql.createConnection({
-    host: process.env.SQL_HOST,
-    user: process.env.SQL_NAME,
-    password: process.env.SQL_PASSWORD,
-    database: process.env.SQL_DATABASE
-});
-
-con.connect(err => {
-    if(err) throw err;
-    console.log("Connected to database.");
-});
-
 //FUNCTIONS
 
 bot.on('message', async message => {
