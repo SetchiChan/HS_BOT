@@ -46,16 +46,24 @@ bot.on('message', async message => {
        })
     }
 
-    if (theMessage.startsWith("?ship")){
+    if (theMessage.startsWith("?test")){
         //let target = message.mentions.users.first() || message.guild.memebers.get(args[1]) || message.author;
         message.channel.send({embed: {
             author: {
-                name: "Earth-Chan",
-                icon_url: "https://vignette.wikia.nocookie.net/virtualyoutuber/images/f/f2/EarthChan.jpg/revision/latest?cb=20180527004331"
+                name: "The Sailor of The Swamp",
+                icon_url: "hhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw7EENWb58bGv-T4d1xzULdmG7vEtts08cExUMvWBeWWa2uUsMZWh-bSzQ3JnuEVELxb0&usqp=CAU"
             },
-            description: generateFanfiction(generatedCharacter),
-            color: 59431,
+            description: "Current transport for bog. NOTE: 'There is a 5 minute delay between each picture update.'",
+            color: 3066993,
             fields: []
+            image: {
+		        url: 'https://i.imgur.com/2ctZ1jf.png',
+	        },
+	        timestamp: new Date(),
+	        footer: {
+		        text: 'Last updated by Skies.',
+		        //icon_url: 'https://i.imgur.com/AfFp7pu.png',
+	        },
             }
        })
     }
