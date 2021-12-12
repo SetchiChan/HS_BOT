@@ -55,14 +55,15 @@ bot.on('message', async message => {
             },
             description: "Current transport for bog. NOTE: 'There is a 5 minute delay between each picture update.'",
             color: 3066993,
-            fields: []
+            fields: [
+	    ],
             image: {
 		        url: 'https://i.imgur.com/2ctZ1jf.png',
 	        },
 	        timestamp: new Date(),
 	        footer: {
 		        text: 'Last updated by Skies.',
-		        //icon_url: 'https://i.imgur.com/AfFp7pu.png',
+		        icon_url: 'https://i.imgur.com/AfFp7pu.png',
 	        },
             }
        })
